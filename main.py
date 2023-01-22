@@ -13,6 +13,7 @@ while start:
     draw(squares)
     if prev_turn == turn:
         print("Invalid square selected, please pick another.")
+    prev_turn = turn
     print("Player " + str((turn % 2) + 1) + "'s turn: Pick your square or press z to quit")
     # Get input from the player
     choice = input()
@@ -21,7 +22,7 @@ while start:
     # Check if player inputs a value from 1-9
     elif str.isdigit(choice) and int(choice) in squares:
         # Check if the square has already been occupied
-        if not squares[int(choice)] in ["X", "O"]:
+        if not squares[int(choice)] in {"X", "O"}:
             # Valid Input, update the board
             turn += 1
             squares[int(choice)] = check(turn)
