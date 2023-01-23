@@ -1,1 +1,1 @@
-# Simple implementaiton of Tic-Tac-Toe game using Python
+# Simple implementation of Tic-Tac-Toe game using Python
